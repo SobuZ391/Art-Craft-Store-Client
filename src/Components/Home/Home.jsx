@@ -6,8 +6,23 @@ import SubcategoryArtCraft from '../CraftsItemsComponents/SubcategoryArtCraft';
 import Team from './ExtraSection/Team';
 import FAQ from './ExtraSection/FAQ';
 import Banner from './Banner';
+import { Fade } from "react-awesome-reveal";
+import Reveal from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
 
 const Home = () => {
+	const customAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(-200px, -100px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
+
     const craftItemsData = useLoaderData();
     const [expanded, setExpanded] = useState(false);
     const [displayedCraftItems, setDisplayedCraftItems] = useState(craftItemsData.slice(0, 6));
@@ -23,7 +38,7 @@ const Home = () => {
 
     return (
         <>
-      <Banner></Banner>
+    <Banner></Banner>
 
         <section className="p-6 my-6 dark:bg-gray-100 dark:text-gray-800">
 	<div className="container grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 xl:grid-cols-4">
@@ -84,16 +99,16 @@ const Home = () => {
 	</div>
 </section>
         
-        <div className='flex justify-center font-bold text-3xl text-primary shadow-xl border-y-2  w-60 mx-auto rounded-lg border-dashed ' ><button className='btn btn-primary shadow-lg font-bold text-xl my-1 ' >Crafts Section</button></div>
+		<Fade> <div className='flex justify-center font-bold text-3xl text-primary shadow-xl border-y-2  w-60 mx-auto rounded-lg border-dashed ' ><button className='btn btn-primary shadow-lg font-bold text-xl my-1 ' >Crafts Section</button></div></Fade>
        <br />
        <hr />
 
-            <div className="grid grid-cols-1 lg:grid-cols-3  lg:m-20">
+ <Reveal keyframes={customAnimation}>  <div className="grid grid-cols-1 lg:grid-cols-3  lg:m-20">
              {displayedCraftItems.map(craftyItem => (
                     <CraftItems key={craftyItem._id} craftyItem={craftyItem} />
                 ))}
             </div>
-
+</Reveal>
            
             {craftItemsData.length > 6 && (
                 <button onClick={handleExpand} className="mt-4 ml-auto mr-auto block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
@@ -105,6 +120,7 @@ const Home = () => {
             <SubcategoryArtCraft></SubcategoryArtCraft>
             <Team></Team>
             <FAQ></FAQ>
+			
         </>
     );
 };

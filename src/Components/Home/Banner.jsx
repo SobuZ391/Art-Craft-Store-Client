@@ -6,7 +6,7 @@ import SwiperSlides from './SwiperSlides';
 
 const Banner = () => {
   return (
-      <div>
+      <div className='mt-14' >
           <section className=" hidden lg:block">
 
 
