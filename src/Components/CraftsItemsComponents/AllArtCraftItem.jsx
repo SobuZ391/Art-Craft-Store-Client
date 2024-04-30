@@ -8,7 +8,7 @@ import { FaStar } from 'react-icons/fa';
    return (
         <div>
                        
-                        <div className="overflow-x-auto my-4">
+                        <div className="overflow-x-auto min-h-screen  my-4">
                     <table className="table">
                       {/* head */}
                       <thead>
