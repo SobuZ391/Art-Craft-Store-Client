@@ -19,7 +19,7 @@ const FAQ = () => {
   return (
     <div>
       <div>
-        <section className="rounded-xl dark:bg-gray-100 dark:text-gray-800">
+        <section className="rounded-xl ">
           <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
             <p className="p-2 text-sm font-medium tracking-wider text-center uppercase">How it works</p>
            
@@ -41,27 +41,27 @@ const FAQ = () => {
       </h1> <div className="grid gap-10 md:gap-8 sm:p-3 md:grid-cols-2 lg:px-12 xl:px-32">
               <div>
                 <h3 className="font-semibold">Browse and Choose</h3>
-                <p className="mt-1 dark:text-gray-600">Explore our wide range of art supplies and craft kits on our website. Use the search and filter options to find exactly what you're looking for.</p>
+                <p className="mt-1 ">Explore our wide range of art supplies and craft kits on our website. Use the search and filter options to find exactly what you're looking for.</p>
               </div>
               <div>
                 <h3 className="font-semibold">Place Your Order:</h3>
-                <p className="mt-1 dark:text-gray-600">Once you've made your selection, add the items to your cart and proceed to checkout. Review your order details and choose your preferred shipping method.</p>
+                <p className="mt-1 ">Once you've made your selection, add the items to your cart and proceed to checkout. Review your order details and choose your preferred shipping method.</p>
               </div>
               <div>
                 <h3 className="font-semibold">Secure Payment: </h3>
-                <p className="mt-1 dark:text-gray-600">Complete your purchase using our secure payment options, including [list of payment methods, e.g., credit card, PayPal, etc.].</p>
+                <p className="mt-1 ">Complete your purchase using our secure payment options, including [list of payment methods, e.g., credit card, PayPal, etc.].</p>
               </div>
               <div>
                 <h3 className="font-semibold">Order Confirmation: </h3>
-                <p className="mt-1 dark:text-gray-600">You will receive an order confirmation email with the details of your purchase and estimated delivery time.</p>
+                <p className="mt-1 ">You will receive an order confirmation email with the details of your purchase and estimated delivery time.</p>
               </div>
               <div>
                 <h3 className="font-semibold">Order Tracking: </h3>
-                <p className="mt-1 dark:text-gray-600">Stay updated on your order's status with our tracking information provided in your confirmation email.</p>
+                <p className="mt-1 ">Stay updated on your order's status with our tracking information provided in your confirmation email.</p>
               </div>
               <div>
                 <h3 className="font-semibold">Q: Can I return or exchange my purchase?</h3>
-                <p className="mt-1 dark:text-gray-600">A: Yes, we offer a [number]-day return and exchange policy. Please refer to our Return Policy page for more details.</p>
+                <p className="mt-1 ">A: Yes, we offer a [number]-day return and exchange policy. Please refer to our Return Policy page for more details.</p>
               </div>
             </div>
           </div>

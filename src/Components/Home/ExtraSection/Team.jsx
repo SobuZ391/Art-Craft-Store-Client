@@ -2,7 +2,7 @@ import React from 'react';
 
 const Team = () => {
     return (
-        <section className="py-6 dark:bg-gray-100 my-10 dark:text-gray-800">
+        <section className="py-6 border-2 rounded-xl my-10 ">
 	<div className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
 		<p className="p-2 text-sm font-medium tracking-wider text-center uppercase">Development team</p>
 		<h1 className="text-4xl font-bold leading-none text-center sm:text-5xl">The talented people behind the scenes</h1>
@@ -101,7 +101,7 @@ const Team = () => {
 				<img alt="" className="self-center flex-shrink-0 w-24 h-24 -mt-12 bg-center object-cover bg-cover rounded-full dark:bg-gray-500" src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
 				<div className="flex-1 my-4">
 					<p className="text-xl font-semibold leading-snug">Leroy Jenkins</p>
-					<p> Muralist</p>
+					<p>Visual Designer</p>
 				</div>
 				<div className="flex items-center justify-center p-3 space-x-3 border-t-2">
 					<a rel="noopener noreferrer" href="#" title="Email" className="dark:text-gray-50 hover:dark:text-violet-600">
