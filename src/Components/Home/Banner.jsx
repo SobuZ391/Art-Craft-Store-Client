@@ -1,41 +1,46 @@
-
-import { Typewriter } from 'react-simple-typewriter'
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import "swiper/css"
-import { StaticImage } from 'gatsby-plugin-image';
-const Banner = () => {
-    
-    <div className="w-[95%] h-[600px] mt-2 mx-auto bg-cover bg-center  rounded-xl flex justify-center flex-col items-start lg:px-28  px-10 gap-7 z-20   ">
-         <Swiper
-      spaceBetween={50}
-      slidesPerView={1}
-    >
-      <SwiperSlide>
-      
-      <div>
-        
-        <StaticImage src="https://i.ytimg.com/vi/l-66JCcn5i8/maxresdefault.jpg"  layout="fixed"
-      width={200}
-      height={200} />
-      </div>
-      
-      </SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      ...
-    </Swiper>
-    </div>
- 
- 
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
+
+const SwiperSlides = () => {
     return (
-        <>
-        
-        </>
+      <div className="w-[100%] h-[35rem] grid grid-cols-1 ">
+     
+       <Swiper
+        // install Swiper modules
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
+      className='w-full md:w-[80%] lg:w-1/2 rounded-xl '
+      >
+   <SwiperSlide><img src="/images/prop7.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide><img src="/images/prop2.webp" alt=""  /></SwiperSlide>
+        <SwiperSlide><img src="/images/prop3.webp" alt=""  /></SwiperSlide>
+        <SwiperSlide><img src="/images/prop1.webp" alt=""  /></SwiperSlide>
+        <SwiperSlide><img src="/images/prop5.webp" alt=""  /></SwiperSlide>
+        <SwiperSlide><img src="/images/prop6.webp" alt=""  /></SwiperSlide>
+        <SwiperSlide><img src="/images/prop8.jpg" alt=""  /></SwiperSlide>
+        <SwiperSlide><img src="/images/prop2.webp" alt=""  /></SwiperSlide>
+        <SwiperSlide><img src="/images/prop3.webp" alt=""  /></SwiperSlide>
+        <SwiperSlide><img src="/images/prop1.webp" alt=""  /></SwiperSlide>
+        <SwiperSlide><img src="/images/prop7.jpg" alt=""  /></SwiperSlide>
+       
+      </Swiper>
+      </div>
     );
 };
 
-
-export default Banner;
+export default SwiperSlides;
