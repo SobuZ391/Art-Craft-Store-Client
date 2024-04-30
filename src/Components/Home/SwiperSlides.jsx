@@ -12,7 +12,9 @@ import 'swiper/css/scrollbar';
 
 const SwiperSlides = () => {
     return (
-        <Swiper
+      <div className=" my-6   ">
+     
+       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
@@ -22,22 +24,16 @@ const SwiperSlides = () => {
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log('slide change')}
-      className='w-[100%] md:w-[80%] lg:w-1/2 rounded-xl '
+      className=' lg:h-[35rem] lg:w-[60rem] m-10   rounded-xl '
       >
-   <SwiperSlide><img src="/images/prop7.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide><img src="/images/prop2.webp" alt=""  /></SwiperSlide>
-        <SwiperSlide><img src="/images/prop3.webp" alt=""  /></SwiperSlide>
-        <SwiperSlide><img src="/images/prop1.webp" alt=""  /></SwiperSlide>
-        <SwiperSlide><img src="/images/prop5.webp" alt=""  /></SwiperSlide>
-        <SwiperSlide><img src="/images/prop6.webp" alt=""  /></SwiperSlide>
-        <SwiperSlide><img src="/images/prop8.jpg" alt=""  /></SwiperSlide>
-        <SwiperSlide><img src="/images/prop2.webp" alt=""  /></SwiperSlide>
-        <SwiperSlide><img src="/images/prop3.webp" alt=""  /></SwiperSlide>
-        <SwiperSlide><img src="/images/prop1.webp" alt=""  /></SwiperSlide>
-        <SwiperSlide><img src="/images/prop7.jpg" alt=""  /></SwiperSlide>
-       
+   <SwiperSlide><img className='lg:object-cover h-[20rem] lg:h-full w-full rounded-md ' src="https://royalthaiart.com/wp-content/uploads/2018/05/ocean-art-detail-1-1024x768.jpg" alt="" /></SwiperSlide>
+        <SwiperSlide><img className='lg:object-cover h-[20rem] lg:h-full w-full rounded-md ' src="https://m.media-amazon.com/images/I/91y9IrbmrTL.jpg" alt=""  />
+        
+        </SwiperSlide>
+        <SwiperSlide><img className='lg:object-cover h-[20rem] lg:h-full w-full rounded-md ' src="https://cdn.britannica.com/04/181004-050-5AD597EA/Travelers-oil-canvas-collection-Meindert-Hobbema-Washington-1662.jpg" alt=""  /></SwiperSlide>
+        <SwiperSlide><img className='lg:object-cover h-[20rem] lg:h-full  rounded-md  w-full' src="https://www.1st-art-gallery.com/cdn-cgi/image/format=webp,quality=85,width=840/media/magefan_blog/The_Hay_Wain_1821.jpg" alt="" /></SwiperSlide>
       </Swiper>
-      
+      </div>
     );
 };
 
