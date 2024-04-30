@@ -1,0 +1,50 @@
+import React, { useState, useEffect } from 'react';
+
+import { Link } from 'react-router-dom';
+
+
+const SubcategoryArtCraft = () => {
+  const [subcategories, setSubcategories] = useState([]);
+
+useEffect(() => {
+    const fetchData = async () => {
+        try {
+            const response = await fetch('http://localhost:5000/craftSubcategories');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            setSubcategories(data); // Update state with fetched data
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            // Handle errors if needed, like setting an error state
+        }
+    };
+
+    fetchData(); // Call the function to fetch data when component mounts
+}, []);
+    return (
+        <div >
+     
+    
+        
+          <h2 className="text-2xl font-bold text-primary btn   border-y-2 rounded-lg text-center  flex  mb-4">Art & Craft Subcategories</h2>
+          
+         
+          <div className="grid grid-cols-3 gap-4">
+  {subcategories.map((subcategory, index) => (
+    <Link key={index} to={`/subcategoryPage/${subcategory.subcategory_name}`}>
+      <div key={subcategory.id} className="p-4 border rounded-md">
+        <img src={subcategory.image} alt='' className="w-full h-32 object-contain mb-2" />
+        <h1 className='font-bold text-xl'>Subcategory: {subcategory.subcategory_name}</h1>
+        <h3 className="font-medium mb-1">{subcategory.key_elements.slice(0, 100)}.</h3>
+      </div>
+    </Link>
+  ))}
+</div>
+            
+        </div>
+    );
+};
+
+export default SubcategoryArtCraft;
