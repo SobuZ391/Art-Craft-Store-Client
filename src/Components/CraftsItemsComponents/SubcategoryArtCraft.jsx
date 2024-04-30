@@ -29,7 +29,7 @@ const SubcategoryArtCraft = () => {
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {subcategories.map((subcategory, index) => (
-          <Link key={index} to={`/subcategoryPage/${subcategory.subcategory_name}`}>
+          <Link key={index} to={`/subcategoryPage`}>
             <div key={subcategory.id} className="p-4 border rounded-md">
               <img src={subcategory.image} alt='' className="w-full h-32 object-contain mb-2" />
               <h1 className='font-bold text-xl'>Subcategory: {subcategory.subcategory_name}</h1>

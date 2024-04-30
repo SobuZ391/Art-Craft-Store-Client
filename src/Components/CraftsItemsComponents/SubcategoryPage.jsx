@@ -4,20 +4,14 @@ import { Link, useLoaderData, useParams } from 'react-router-dom';
 
 
 
-const SubcategoryPage = ({ subcategories }) => {
+const SubcategoryPage = () => {
   const loadedUsers = useLoaderData();
-  const { subcategory_name } = useParams(); // This retrieves the id parameter from the URL
 
-  // Filter the subcategories based on the id
-  const filteredSubcategory = subcategories.filter(subcategory => subcategory.subcategory_name == subcategory_name);
-
-  // Assuming filteredSubcategory is an array containing only one element (if the id is unique)
-  const subcategory = filteredSubcategory[0]; // Get the filtered subcategory object
 
   
     return (
       <div className="w-[90%] grid grid-cols-1 lg:grid-cols-3 gap-10 m-2 mx-auto p-4 rounded-md hover:shadow-lg transition-all ease-in-out border font-semibold">
-      {subcategory && loadedUsers.map((craftData, index) => (
+      { loadedUsers.map((craftData, index) => (
         <div key={index} className="space-y-4 border p-2 rounded-xl">
           <div className="space-y-2">
             <img src={craftData.image} alt="" className="block object-cover object-center w-full rounded-md h-72" />
