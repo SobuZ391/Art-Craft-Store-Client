@@ -29,12 +29,11 @@ const FAQ = () => {
           {/* Style will be inherited from the parent element */}
           <Typewriter
             words={['Art', ' Craft', 'FAQs', ]}
-            loop={5}
+            loop={10000}
             cursor
             cursorStyle='_'
             typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={1000}
+           
            
           />
         </span>
