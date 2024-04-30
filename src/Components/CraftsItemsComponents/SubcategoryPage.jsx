@@ -4,14 +4,13 @@ import { Link, useLoaderData, useParams } from 'react-router-dom';
 
 
 
-const SubcategoryPage = () => {
+const SubcategoryPage = ({ subcategories }) => {
   const loadedUsers = useLoaderData();
-
-
+ 
   
     return (
       <div className="w-[90%] grid grid-cols-1 lg:grid-cols-3 gap-10 m-2 mx-auto p-4 rounded-md hover:shadow-lg transition-all ease-in-out border font-semibold">
-      { loadedUsers.map((craftData, index) => (
+      {loadedUsers.map((craftData, index) => (
         <div key={index} className="space-y-4 border p-2 rounded-xl">
           <div className="space-y-2">
             <img src={craftData.image} alt="" className="block object-cover object-center w-full rounded-md h-72" />
