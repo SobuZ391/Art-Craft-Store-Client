@@ -1,4 +1,14 @@
-# React + Vite
+AshBorn Gallery
+
+- URL:
+- It has add system where i can add data
+- update system to update data
+- all item view system
+- art and craft subcategory section
+- dynamic navbar and private routes available
+
+  
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
