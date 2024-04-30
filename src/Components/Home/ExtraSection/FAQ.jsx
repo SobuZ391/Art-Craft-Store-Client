@@ -1,8 +1,11 @@
 import AOS from "aos";
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
+import { Typewriter } from 'react-simple-typewriter'
+
 
 const FAQ = () => {
+
   // Initialize AOS in the useEffect hook when the component mounts
   useEffect(() => {
     AOS.init({
@@ -19,8 +22,23 @@ const FAQ = () => {
         <section className="rounded-xl dark:bg-gray-100 dark:text-gray-800">
           <div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
             <p className="p-2 text-sm font-medium tracking-wider text-center uppercase">How it works</p>
-            <h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">Art & Craft FAQs</h2>
-            <div className="grid gap-10 md:gap-8 sm:p-3 md:grid-cols-2 lg:px-12 xl:px-32">
+           
+			<h1  className=" p-12 text-4xl font-bold leading-none text-center sm:text-5xl" style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal' }}>
+        Here Cou Can Know {' '}
+        <span style={{ color: 'red', fontWeight: 'bold' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={['Art', ' Craft', 'FAQs', ]}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+           
+          />
+        </span>
+      </h1> <div className="grid gap-10 md:gap-8 sm:p-3 md:grid-cols-2 lg:px-12 xl:px-32">
               <div>
                 <h3 className="font-semibold">Browse and Choose</h3>
                 <p className="mt-1 dark:text-gray-600">Explore our wide range of art supplies and craft kits on our website. Use the search and filter options to find exactly what you're looking for.</p>
